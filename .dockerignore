@@ -1,0 +1,10 @@
+.git
+.agents
+.codex
+dist
+dist-docker*
+node_modules
+bin
+extensions/http-extension.exe
+resources/js/neutralino.js
+cmd/launcher/payload

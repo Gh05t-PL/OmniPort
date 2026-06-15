@@ -1,0 +1,59 @@
+{
+  "$schema": "https://raw.githubusercontent.com/neutralinojs/neutralinojs/main/schemas/neutralino.config.schema.json",
+  "applicationId": "pl.codesymfony.omniport",
+  "applicationName": "OmniPort",
+  "applicationIcon": "public/omniport-logo.png",
+  "description": "OmniPort HTTP client",
+  "version": "APP_VERSION$$",
+  "defaultMode": "window",
+  "port": 0,
+  "documentRoot": "/resources/",
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "enableExtensions": true,
+  "tokenSecurity": "one-time",
+  "dataLocation": "system",
+  "storageLocation": "system",
+  "logging": {
+    "enabled": false,
+    "writeToLogFile": false
+  },
+  "modes": {
+    "window": {
+      "title": "OmniPort",
+      "width": 1280,
+      "height": 820,
+      "icon": "resources/omniport-logo.png",
+      "minWidth": 960,
+      "minHeight": 620,
+      "center": false,
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "enableInspector": true,
+      "borderless": false,
+      "maximize": false,
+      "hidden": false,
+      "resizable": true,
+      "useSavedState": true,
+      "exitProcessOnClose": true
+    },
+    "browser": {},
+    "cloud": {},
+    "chrome": {}
+  },
+  "extensions": [
+    {
+      "id": "pl.codesymfony.omniport-http-ext",
+      "command": "${NL_PATH}/extensions/http-extension.exe"
+    }
+  ],
+  "cli": {
+    "binaryName": "omniport",
+    "resourcesPath": "/resources/",
+    "extensionsPath": "/extensions/",
+    "clientLibrary": "/resources/js/neutralino.js",
+    "binaryVersion": "6.8.0",
+    "clientVersion": "6.8.0"
+  }
+}

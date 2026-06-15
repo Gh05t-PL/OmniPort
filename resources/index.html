@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neutralino HTTP Extension Demo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="toolbar" aria-label="HTTP request controls">
+        <div>
+          <h1>HTTP extension demo</h1>
+          <p>Request wykonywany jest poza UI, w Neutralino extension.</p>
+        </div>
+        <button id="fetchButton" type="button">
+          <span aria-hidden="true">↻</span>
+          Pobierz posty
+        </button>
+      </section>
+
+      <section class="status-row" aria-live="polite">
+        <label class="endpoint-field" for="endpoint">
+          <span class="label">Endpoint</span>
+          <input
+            id="endpoint"
+            type="url"
+            spellcheck="false"
+            autocomplete="off"
+            value="https://jsonplaceholder.typicode.com/posts"
+          />
+        </label>
+        <label class="reuse-field" for="disableReuse">
+          <input id="disableReuse" type="checkbox" checked />
+          <span>Nowe polaczenie</span>
+        </label>
+        <div class="status-field">
+          <span class="label">Status</span>
+          <span id="status" class="status idle">Gotowe</span>
+        </div>
+      </section>
+
+      <section class="response-panel" aria-label="HTTP response">
+        <pre id="response">Kliknij "Pobierz posty", zeby uruchomic request przez extension.</pre>
+      </section>
+    </main>
+
+    <script src="/js/neutralino.js"></script>
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>
